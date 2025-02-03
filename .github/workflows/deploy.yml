@@ -22,7 +22,7 @@ jobs:
       - name: Deploy to Server
         run: |
           ssh -T -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
-            /home/udithanuwanbandara2/mern-app
+            cd Dockerizing-a-MERN-Stack-App-with-Nginx
             git pull origin main
             docker compose down
             docker compose build
